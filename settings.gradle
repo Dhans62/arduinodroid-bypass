@@ -1,0 +1,2 @@
+rootProject.name = "ArduinoDroidBypass"
+include ':app'
