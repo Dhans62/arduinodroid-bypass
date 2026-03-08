@@ -1,0 +1,27 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.dhan.bypass'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.dhan.bypass"
+        minSdk 26 // Sama dengan ArduinoDroid
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+}
+
+dependencies {
+    // LSPosed API (Terbaru & Stabil)
+    compileOnly 'org.lsposed.xposed:api:1.0'
+}
