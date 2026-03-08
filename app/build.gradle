@@ -8,7 +8,7 @@ android {
 
     defaultConfig {
         applicationId "com.dhan.bypass"
-        minSdk 26 // Sama dengan ArduinoDroid
+        minSdk 26 // Sesuai dengan spesifikasi ArduinoDroid
         targetSdk 34
         versionCode 1
         versionName "1.0"
@@ -17,11 +17,16 @@ android {
     buildTypes {
         release {
             minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
 }
 
 dependencies {
-    // LSPosed API (Terbaru & Stabil)
+    // API LSPosed stabil terbaru
     compileOnly 'org.lsposed.xposed:api:1.0'
 }
